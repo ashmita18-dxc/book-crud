@@ -1,0 +1,67 @@
+<p>header works!</p>
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+  </nav>
+<button (click)="clickMe()" class="btn btn-info">Click Me</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="well well-sm">
+                <form (ngSubmit)="createContact()" class="form-horizontal"
+                (ngSubmit)="processForm()">
+            <fieldset>
+                <legend class="text-center">Contact Us</legend>
+
+                <!--Name input-->
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="name">Name</label>{{userName}}
+                    <div class="col-md-9">
+                        <input id="name" name="userName" type="text" placeholder="Your name" class="form-control" [(ngModel)]="userName">
+                    </div>
+                </div>
+
+                <!--Email-->
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="email">Email</label>{{email}}
+                    <div class="col-md-9">
+                        <input id="email" name="email" type="text" placeholder="Your email" class="form-control"[(ngModel)]="email">
+                    </div>
+                </div>
+
+                <!--Number-->
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="name">Phone</label>{{phone}}
+                    <div class="col-md-9">
+                        <input id="phone" name="phone" type="number" placeholder="Your number" class="form-control"[(ngModel)]="phone">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label"  for="message">your message</label>
+                    <div class="col-md-9">
+                        <textarea class="form-control" id="message" name="message" [(ngModel)]="message" placeholder="please enter your message..." rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-info btn-lg">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
